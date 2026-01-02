@@ -30,6 +30,7 @@
         width: 200px;
         height: auto;
         margin-bottom: 0px;
+        margin-left: -10px;
       }
 
       #title {
@@ -45,17 +46,18 @@
   </head>
 
   <body>
-          <img src="./logoGLBViewer-3.png" alt="Logo" id="logo" />
     <div id="ui">
+          <img src="./logoGLBViewer-3.png" alt="Logo" id="logo" />
 
       
       <h1 id="title">GLB VR Viewer</h1>
       <p>Load a glb file from your headset, <br> then click the VR button on the bottom <br> right corner of the page.</p>
       <input type="file" id="fileInput" accept=".glb" />
-    </div>
-<div id="footer">
+      <div id="footer">
   © 2026 Emmanuel Azouvi
 </div>
+    </div>
+
     <a-scene vr-mode-ui="enabled: true">
       <a-entity
   laser-controls="hand: right"
