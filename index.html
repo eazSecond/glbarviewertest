@@ -63,6 +63,14 @@
         const url = URL.createObjectURL(file);
         model.setAttribute("gltf-model", url);
       });
+
+    
+      model.addEventListener("click", () => {
+        const rotation = model.getAttribute("rotation");
+        rotation.y += 15; // degrees per click
+        model.setAttribute("rotation", rotation);
+      });
+
     </script>
   </body>
 </html>
