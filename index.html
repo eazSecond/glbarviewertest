@@ -8,7 +8,7 @@
         <!-- Super Hands -->
 
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
-  <script src="https://unpkg.com/super-hands@^3.0.6/dist/super-hands.min.js"></script>    
+  <!--<script src="https://unpkg.com/super-hands@^3.0.6/dist/super-hands.min.js"></script>  --> 
     <style>
       body {
         margin: 0;
@@ -33,21 +33,24 @@
     </div>
 
     <a-scene vr-mode-ui="enabled: true">
-      <a-entity laser-controls="hand: right"></a-entity>
+      <a-entity
+  laser-controls="hand: right"
+  raycaster="objects: .interactable">
+</a-entity>
       <a-entity
         id="model"
         position="0 0 -2"
         rotation="0 0 0"
         scale="1 1 1"
         class="interactable"
-        super-hands>
+
+        >
       </a-entity>
 
       <a-camera position="0 1.6 0"></a-camera>
 
  <!-- Contrôleurs Meta Quest avec super hands -->
-  <a-entity id="leftController" meta-touch-controls="hand: left" super-hands></a-entity>
-  <a-entity id="rightController" meta-touch-controls="hand: right" super-hands></a-entity>
+
       
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
